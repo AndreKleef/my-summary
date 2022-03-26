@@ -1,18 +1,20 @@
 <template>
   <div class="home">
-
-    <testChallenge msg="Welcome to Your Vue.js App"/>
+    <promo msg="Добро пожаловать на мою страницу"/>
+    <skills msg="Мои ключевые навыки"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import testChallenge from '@/components/testChallenge.vue'
+import promo from '@/components/home/promo.vue'
+import skills from '@/components/home/skills.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    testChallenge
+    promo,
+    skills,
   }
 }
 </script>

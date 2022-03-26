@@ -5,12 +5,4 @@
 </template>
 <style lang="scss">
 
-  .about {
-    background: #f9f9f9;
-
-    h1 {
-      color: red;
-    }
-  }
-
 </style>
