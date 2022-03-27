@@ -10,7 +10,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -27,12 +26,12 @@ export default {
 <style scoped lang="scss">
 
   .promo {
-    background: url('../../assets/img/promo-2.jpeg') no-repeat center/cover;
+    background: url('../../assets/img/promo.jpeg') no-repeat center/cover;
     width: 100%;
-    height: 700px;
+    height: 600px;
     position: relative;
 
-    &::after {
+    &::before {
       content: '';
       position: absolute;
       top: 0;
@@ -40,6 +39,32 @@ export default {
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45%;
+      height: 100%;
+      background: rgba(238, 238, 238, 0.65);
+      z-index: 1;
+    }
+
+    &__container {
+      position: relative;
+      height: 100%;
+    }
+
+    &__content {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 15px;
+      width: 37%;
+      z-index: 2;
     }
   }
 </style>

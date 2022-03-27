@@ -14,16 +14,41 @@
   <router-view/>
 
   <footer class="page-footer">
-    <ul class="page-footer__list">
-      <li class="page-footer__item">
-        <a class="page-footer__item-link" href="tel:84938493832">8 932 213 12 23</a>
-      </li>
-      <li class="page-footer__item">
-        <a class="page-footer__item-link" href="tel:84938493832">8 932 213 12 23</a>
-      </li>
-    </ul>
+    <div class="page-footer__container container">
+      <div class="page-footer__main">
+        <div class="page-footer__image">
+          <img class="page-footer__image-pic" alt="logo" src="./assets/img/logo_white.png">
+        </div>
+        <span class="page-footer__main-text text">29.03.2022</span>
+      </div>
+
+      <ul class="page-footer__list">
+        <li class="page-footer__item">
+          <a class="page-footer__social" target="_blank" href="tel:84938493832">
+            <span class="page-footer__social-icon page-footer__social-icon_phone"></span>
+            <span class="page-footer__social-link text" >8 991 512 76 45</span>
+          </a>
+        </li>
+        <li class="page-footer__item">
+          <a class="page-footer__social" target="_blank" href="mailto:84938493832">
+            <span class="page-footer__social-icon page-footer__social-icon_mail"></span>
+            <span class="page-footer__social-link text" >kleef001@gmail.com</span>
+          </a>
+        </li>
+        <li class="page-footer__item">
+          <a class="page-footer__social" target="_blank" href="https://t.me/AndreSlivka">
+            <span class="page-footer__social-icon page-footer__social-icon_telegram"></span>
+            <span class="page-footer__social-link text" >@AndreSlivka</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
 </template>
+
+<script>
+
+</script>
 
 <style lang="scss">
 
@@ -35,11 +60,32 @@
   text-decoration: none;
 }
 
+ul,ol,li {
+  list-style-type: none;
+}
+
+body {
+  background: #f0f1f2;
+}
+
 .title {
+  font-size: 36px;
+  padding-bottom: 24px;
+  letter-spacing: 1.5px;
   color: rgba(0,0,0,0.8);
 }
 
+.subtitle {
+  font-size: 30px;
+  padding-bottom: 20px;
+  letter-spacing: 1.5px;
+  color: rgba(0,0,0,0.8);
+  text-align: center;
+}
+
 .text {
+  font-size: 18px;
+  line-height: 1.6;
   color: rgba(0,0,0,0.8);
 }
 
@@ -53,6 +99,12 @@
 
 .page-header {
   padding: 10px 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 5;
 
   &__container {
     display: flex;
@@ -71,7 +123,6 @@
   }
 
   &__nav {
-
     &-link {
       margin-left: 20px;
       color: #676767;
@@ -90,6 +141,62 @@
 .page-footer {
   background: rgba(0,0,0,0.9);
   padding: 10px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-text {
+      font-size: 14px;
+      color: #676767;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6px 0;
+
+    &-icon {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+
+
+      &_phone {
+        background-image: url('./assets/img/phone.svg');
+      }
+      &_mail {
+        background-image: url('./assets/img/mail.svg');
+      }
+      &_telegram {
+        background-image: url('./assets/img/tg.svg');
+      }
+    }
+
+    &-link {
+      color: #ffffff;
+      font-size: 16px;
+      transition: 0.2s;
+
+      &:hover {
+        color: #676767;
+      }
+    }
+  }
+
+
 }
 
 </style>
