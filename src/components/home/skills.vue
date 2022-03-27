@@ -63,6 +63,11 @@ export default {
       text-align: center;
       flex-wrap: wrap;
       padding: 20px 0;
+
+      @media (max-width: 1200px) {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
     }
 
     &__item {
@@ -84,6 +89,10 @@ export default {
 
       &:hover {
         box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
+      }
+
+      @media (max-width: 1200px) {
+        margin-right: 24px;
       }
     }
 

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import MapView from '../views/MapView.vue'
 
 const routes = [
   {
@@ -10,7 +11,8 @@ const routes = [
   {
     path: '/map',
     name: 'map',
-    component: () => import(/* webpackChunkName: "map" */ '../views/MapView.vue')
+    component: MapView
+    // component: () => import(/* webpackChunkName: "map" */ '../views/MapView.vue')
   }
 ]
 

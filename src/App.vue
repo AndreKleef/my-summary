@@ -1,9 +1,9 @@
 <template>
   <header class="page-header">
     <div class="page-header__container container">
-      <div class="page-header__image">
+      <router-link class="page-header__image" to="/">
         <img class="page-header__image-pic" alt="logo" src="./assets/img/logo_black.png">
-      </div>
+      </router-link>
       <nav class="page-header__nav">
         <router-link class="page-header__nav-link" to="/">Главная</router-link>
         <router-link class="page-header__nav-link" to="/map">Геопозиция</router-link>
@@ -16,9 +16,9 @@
   <footer class="page-footer">
     <div class="page-footer__container container">
       <div class="page-footer__main">
-        <div class="page-footer__image">
+        <router-link class="page-footer__image" to="/">
           <img class="page-footer__image-pic" alt="logo" src="./assets/img/logo_white.png">
-        </div>
+        </router-link>
         <span class="page-footer__main-text text">29.03.2022</span>
       </div>
 
@@ -70,9 +70,13 @@ body {
 
 .title {
   font-size: 36px;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
   letter-spacing: 1.5px;
   color: rgba(0,0,0,0.8);
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 }
 
 .subtitle {
@@ -81,12 +85,20 @@ body {
   letter-spacing: 1.5px;
   color: rgba(0,0,0,0.8);
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .text {
   font-size: 18px;
   line-height: 1.6;
   color: rgba(0,0,0,0.8);
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 #app {
@@ -135,6 +147,9 @@ body {
         color: rgba(0,0,0,1);
       }
     }
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
@@ -145,6 +160,16 @@ body {
   &__container {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__image {
+    width: 300px;
+    height: auto;
+
+    &-pic {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__main {

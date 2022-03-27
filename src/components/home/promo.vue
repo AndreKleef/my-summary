@@ -31,6 +31,10 @@ export default {
     height: 600px;
     position: relative;
 
+    @media (max-width: 768px) {
+      height: 360px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -51,6 +55,10 @@ export default {
       height: 100%;
       background: rgba(238, 238, 238, 0.65);
       z-index: 1;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     &__container {
@@ -65,6 +73,15 @@ export default {
       left: 15px;
       width: 37%;
       z-index: 2;
+
+      @media (max-width: 768px) {
+        width: 75%;
+      }
+      @media (max-width: 575px) {
+        width: 90%;
+        padding: 0 15px;
+        left: 0;
+      }
     }
   }
 </style>

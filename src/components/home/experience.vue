@@ -123,7 +123,7 @@ export default {
       position: absolute;
       top: 0;
       right: 55%;
-      width: 50%;
+      width: 40%;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -154,7 +154,7 @@ export default {
       position: absolute;
       top: 0;
       left: 55%;
-      width: 50%;
+      width: 40%;
       z-index: 2;
       padding: 90px 15px 90px 0;
       max-height: 420px;

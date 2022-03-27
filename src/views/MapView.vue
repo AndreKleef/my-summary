@@ -1,8 +1,17 @@
 <template>
   <div class="map">
-    <h1>This is an about page</h1>
+    <mapTemplate msg="Мое местоположение"/>
   </div>
 </template>
-<style lang="scss">
 
-</style>
+<script>
+
+import mapTemplate from '@/components/map/map.vue'
+
+export default {
+  name: 'MapView',
+  components: {
+    mapTemplate,
+  }
+}
+</script>
