@@ -6,12 +6,12 @@
 
 <script>
 
-import mapTemplate from '@/components/map/map.vue'
+  import mapTemplate from '@/components/map/map.vue'
 
-export default {
-  name: 'MapView',
-  components: {
-    mapTemplate,
+  export default {
+    name: 'MapView',
+    components: {
+      mapTemplate
+    }
   }
-}
 </script>
