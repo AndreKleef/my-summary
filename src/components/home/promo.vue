@@ -4,8 +4,8 @@
       <div class="promo__content">
         <h1 class="promo__content-title title">{{ msg }}</h1>
         <p class="promo__content-text text">
-          На протяжении всего путешествия по мини сайту, вы узнаете, что я умею,
-          где набрался опыта, что могу использовать, а что в процессе обучения, приятного пути! ;)
+          На протяжении всего путешествия по мини сайту, вы узнаете, что я использую для реализации верстки и разработки,
+          где набрался опыта, и что еще нужно освоить для того, чтобы комфортно себя чувствовать в сфере IT, конкретно Frontend, приятного вам пути! ;)
         </p>
       </div>
     </div>
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  export default {
+    name: 'HelloWorld',
+    props: {
+      msg: String
+    }
   }
-}
 </script>
 
 <style scoped lang="scss">

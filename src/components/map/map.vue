@@ -8,23 +8,21 @@
 
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  export default {
+    name: 'HelloWorld',
+    props: {
+      msg: String
+    }
   }
-}
 </script>
 
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
   #app .map {
     min-height: calc(100vh - 155px - 65px);
 
     &__container {
       @media (max-width: 768px) {
-        padding: 0 55px;
+        padding: 0 25px;
       }
     }
 

@@ -10,67 +10,34 @@
             class="experiense__tabs-item">{{ row.title }}
           </span>
         </div>
-        <div v-if="currentTab == 1" class="experiense__description">
-          <p class="experiense__description-text text">Информационные технологии, системная интеграция, интернет</p>
-          <p class="experiense__description-text text">Интернет-провайдер</p>
-          <p class="experiense__description-text text">Разработка программного обеспечения</p>
-          <p class="experiense__description-text text">Адаптивная верстка (html, css, jquery, js,)</p>
-          <p class="experiense__description-text text">Верстка по макетам psd, макетам в figma и xd</p>
-          <p class="experiense__description-text text">Полная посадка на Modx</p>
-          <p class="experiense__description-text text">Редактирование в Wordpress</p>
-        </div>
-        <div v-if="currentTab == 2" class="experiense__description">
-          <p class="experiense__description-text text">Информационные технологии, системная интеграция, интернет</p>
-          <p class="experiense__description-text text">Интернет-компания (поисковики, платежные системы, соц.сети, информационно-познавательные и развлекательные ресурсы, продвижение сайтов и прочее)</p>
-          <p class="experiense__description-text text">Разработка программного обеспечения</p>
-          <p class="experiense__description-text text">Системная интеграция, автоматизации технологических и бизнес-процессов предприятия</p>
-          <p class="experiense__description-text text">-Написание и редактирования функционала сайта на чистом javaScript</p>
-          <p class="experiense__description-text text">-Адаптивная верстка для мобильных устройств.</p>
-          <p class="experiense__description-text text">-Кросс-браузерная верстка</p>
-          <p class="experiense__description-text text">-Валидная верстка сайта(соответствующая стандартам W3C)</p>
-          <p class="experiense__description-text text">-Семантическая верстка</p>
-          <p class="experiense__description-text text">-Оптимизация под поисковые системы</p>
-          <p class="experiense__description-text text">-Оптимизация скорости загрузки сайта</p>
-        </div>
-        <div v-if="currentTab == 3" class="experiense__description">
-          <p class="experiense__description-text text">Информационные технологии, системная интеграция, интернет</p>
-          <p class="experiense__description-text text">Интернет-компания (поисковики, платежные системы, соц.сети, информационно-познавательные и развлекательные ресурсы, продвижение сайтов и прочее)</p>
-          <p class="experiense__description-text text">Работа ограничена одним проектом</p>
-          <p class="experiense__description-text text">Верстка новых страниц, блоков, элементов, писем по дизайну в figma</p>
-          <p class="experiense__description-text text">Переписывание функционала с jquery на typescript</p>
-          <p class="experiense__description-text text">Опыт работы с vue.js</p>
+        <div v-for="row in content" :key="row">
+          <div v-if="currentTab == row.id" class="experiense__description">
+            <p class="experiense__description-text text" v-html="row.content"></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- <div v-for="row in content" :key="row"
-        v-if="currentTab == row.id"
-        class="content">
-    <h2>{{ row.id }}</h2>
-    <p>{{ row.content }}</p>
-  </div> -->
-
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String,
-    content: Array
-  },
-  data() {
-    return {
-      currentTab: 1
-    }
-  },
-  methods:{
-    selectTab(selectedTab) {
-        this.currentTab = selectedTab
+  export default {
+    name: 'HelloWorld',
+    props: {
+      msg: String,
+      content: Array
+    },
+    data() {
+      return {
+        currentTab: 1
+      }
+    },
+    methods:{
+      selectTab(selectedTab) {
+          this.currentTab = selectedTab
+      }
     }
   }
-}
 </script>
 
 <style scoped lang="scss">

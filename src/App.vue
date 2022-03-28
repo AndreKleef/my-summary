@@ -26,13 +26,13 @@
         </router-link>
         <ul class="page-footer__list">
           <li class="page-footer__item">
-            <a class="page-footer__social" target="_blank" href="tel:84938493832">
+            <a class="page-footer__social" target="_blank" href="tel:89915127645">
               <span class="page-footer__social-icon page-footer__social-icon_phone"></span>
               <span class="page-footer__social-link text" >8 991 512 76 45</span>
             </a>
           </li>
           <li class="page-footer__item">
-            <a class="page-footer__social" target="_blank" href="mailto:84938493832">
+            <a class="page-footer__social" target="_blank" href="mailto:kleef001@gmail.com">
               <span class="page-footer__social-icon page-footer__social-icon_mail"></span>
               <span class="page-footer__social-link text" >kleef001@gmail.com</span>
             </a>
@@ -45,7 +45,7 @@
           </li>
         </ul>
       </div>
-      <span class="page-footer__main-text text">29.03.2022</span>
+      <span class="page-footer__main-text text">28.03.2022</span>
     </div>
   </footer>
 </template>

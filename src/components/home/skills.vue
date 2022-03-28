@@ -15,38 +15,38 @@
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      column: [
-        {
-          image: require('../../assets/img/icon-html.png'),
-          title: 'HTML — стандартизированный язык разметки документов для просмотра веб-страниц в браузере.',
-        },
-        {
-          image: require('../../assets/img/icon-css.png'),
-          title: 'CSS — стандартизированный язык разметки документов для просмотра веб-страниц в браузере.',
-        },
-        {
-          image: require('../../assets/img/icon-js.png'),
-          title: 'JS — стандартизированный язык разметки документов для просмотра веб-страниц в браузере.',
-        },
-        {
-          image: require('../../assets/img/icon-github.png'),
-          title: 'GIT — стандартизированный язык разметки документов для просмотра веб-страниц в браузере.',
-        },
-        {
-          image: require('../../assets/img/icon-responsive.png'),
-          title: 'RESPONSIVE — стандартизированный язык разметки документов для просмотра веб-страниц в браузере.',
-        }
-      ]
+  export default {
+    name: 'HelloWorld',
+    props: {
+      msg: String
+    },
+    data() {
+      return {
+        column: [
+          {
+            image: require('../../assets/img/icon-html.png'),
+            title: 'HTML5 — Здесь практика и еще раз практика, поэтому в его освоении не было проблем, БЭМ в том числе, с Twig почти на "ТЫ"',
+          },
+          {
+            image: require('../../assets/img/icon-css.png'),
+            title: 'CSS3 — зачем нужен CSS, когда есть SCSS) структурно расположить стили, чтобы было красиво и без лишней перезаписи) mixins только пользовался, с нуля не писал, но проблем в этом не вижу',
+          },
+          {
+            image: require('../../assets/img/icon-github.png'),
+            title: 'GIT — в компании (где сейчас работаю) используем bitbucket, поэтому переход на github пробем не составит',
+          },
+          {
+            image: require('../../assets/img/icon-js.png'),
+            title: 'JS — здесь все серьезно! На данный момент изучаю основы, в компании и за его пределами, решаю не большие задачи',
+          },
+          {
+            image: require('../../assets/img/icon-vue.png'),
+            title: 'Vue.js — лично для меня он всегда был интересен, но не решался углубляться, поскольку знаний JS маловато, но при сборке этого сайта, так сказать... сегодня был небольшой толчок в развитии ;)',
+          }
+        ]
+      }
     }
   }
-}
 </script>
 
 <style scoped lang="scss">
@@ -71,8 +71,8 @@ export default {
     }
 
     &__item {
-      width: 182px;
-      padding: 16px;
+      width: 190px;
+      padding: 16px 12px;
       margin-bottom: 24px;
       border-radius: 4px;
       background: #ffffff;
@@ -80,11 +80,11 @@ export default {
       cursor: pointer;
 
       &-text {
-        font-size: 16px;
+        font-size: 14px;
       }
 
       &:not(:nth-child(5n + 5)) {
-        margin-right: 24px;
+        margin-right: 25px;
       }
 
       &:hover {
@@ -92,7 +92,16 @@ export default {
       }
 
       @media (max-width: 1200px) {
-        margin: 0 24px 0 0;
+        margin-bottom: 0;
+        flex: 0 0 190px;
+
+        &:not(:nth-child(5n + 5)) {
+          margin-right: 0;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 25px;
+        }
       }
     }
 
@@ -100,10 +109,12 @@ export default {
       width: 100px;
       height: 100px;
       margin: 0 auto 12px auto;
+      display: flex;
+      align-items: center;
 
       &-pic {
         width: 100%;
-        height: 100%;
+        height: auto;
       }
     }
   }

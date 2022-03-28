@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
   import mapTemplate from '@/components/map/map.vue'
 
   export default {
