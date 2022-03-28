@@ -42,10 +42,6 @@ export default {
         {
           image: require('../../assets/img/icon-responsive.png'),
           title: 'RESPONSIVE — стандартизированный язык разметки документов для просмотра веб-страниц в браузере.',
-        },
-        {
-          image: require('../../assets/img/icon-responsive.png'),
-          title: 'RESPONSIVE — стандартизированный язык разметки документов для просмотра веб-страниц в браузере.',
         }
       ]
     }
@@ -57,6 +53,10 @@ export default {
 
   .skills {
     margin: 60px 0 36px 0;
+
+    @media (max-width: 1200px) {
+      margin: 30px 0 0 0;
+    }
 
     &__cards {
       display: flex;
@@ -92,7 +92,7 @@ export default {
       }
 
       @media (max-width: 1200px) {
-        margin-right: 24px;
+        margin: 0 24px 0 0;
       }
     }
 

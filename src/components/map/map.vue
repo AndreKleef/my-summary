@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
     <h1 class="subtitle">{{ msg }}</h1>
+
+    <yandex-map :settings="settings">
+        <!--Markers-->
+    </yandex-map>
   </div>
 </template>
 

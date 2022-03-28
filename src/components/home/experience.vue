@@ -3,44 +3,42 @@
     <h2 class="experiense__content-title subtitle">{{ msg }}</h2>
     <div class="experiense__block">
       <div class="experiense__container container">
-        <div class="experiense__content">
-          <div class="experiense__tabs">
-            <span @click="selectTab(row.id)"
-              v-for="row in content" :key="row"
-              :class="{ 'active' : currentTab == row.id }"
-              class="experiense__tabs-item">{{ row.title }}
-            </span>
-          </div>
-          <div v-if="currentTab == 1" class="experiense__description">
-            <p class="experiense__description-text text">Информационные технологии, системная интеграция, интернет</p>
-            <p class="experiense__description-text text">Интернет-провайдер</p>
-            <p class="experiense__description-text text">Разработка программного обеспечения</p>
-            <p class="experiense__description-text text">Адаптивная верстка (html, css, jquery, js,)</p>
-            <p class="experiense__description-text text">Верстка по макетам psd, макетам в figma и xd</p>
-            <p class="experiense__description-text text">Полная посадка на Modx</p>
-            <p class="experiense__description-text text">Редактирование в Wordpress</p>
-          </div>
-          <div v-if="currentTab == 2" class="experiense__description">
-            <p class="experiense__description-text text">Информационные технологии, системная интеграция, интернет</p>
-            <p class="experiense__description-text text">Интернет-компания (поисковики, платежные системы, соц.сети, информационно-познавательные и развлекательные ресурсы, продвижение сайтов и прочее)</p>
-            <p class="experiense__description-text text">Разработка программного обеспечения</p>
-            <p class="experiense__description-text text">Системная интеграция, автоматизации технологических и бизнес-процессов предприятия</p>
-            <p class="experiense__description-text text">-Написание и редактирования функционала сайта на чистом javaScript</p>
-            <p class="experiense__description-text text">-Адаптивная верстка для мобильных устройств.</p>
-            <p class="experiense__description-text text">-Кросс-браузерная верстка</p>
-            <p class="experiense__description-text text">-Валидная верстка сайта(соответствующая стандартам W3C)</p>
-            <p class="experiense__description-text text">-Семантическая верстка</p>
-            <p class="experiense__description-text text">-Оптимизация под поисковые системы</p>
-            <p class="experiense__description-text text">-Оптимизация скорости загрузки сайта</p>
-          </div>
-          <div v-if="currentTab == 3" class="experiense__description">
-            <p class="experiense__description-text text">Информационные технологии, системная интеграция, интернет</p>
-            <p class="experiense__description-text text">Интернет-компания (поисковики, платежные системы, соц.сети, информационно-познавательные и развлекательные ресурсы, продвижение сайтов и прочее)</p>
-            <p class="experiense__description-text text">Работа ограничена одним проектом</p>
-            <p class="experiense__description-text text">Верстка новых страниц, блоков, элементов, писем по дизайну в figma</p>
-            <p class="experiense__description-text text">Переписывание функционала с jquery на typescript</p>
-            <p class="experiense__description-text text">Опыт работы с vue.js</p>
-          </div>
+        <div class="experiense__tabs">
+          <span @click="selectTab(row.id)"
+            v-for="row in content" :key="row"
+            :class="{ 'active' : currentTab == row.id }"
+            class="experiense__tabs-item">{{ row.title }}
+          </span>
+        </div>
+        <div v-if="currentTab == 1" class="experiense__description">
+          <p class="experiense__description-text text">Информационные технологии, системная интеграция, интернет</p>
+          <p class="experiense__description-text text">Интернет-провайдер</p>
+          <p class="experiense__description-text text">Разработка программного обеспечения</p>
+          <p class="experiense__description-text text">Адаптивная верстка (html, css, jquery, js,)</p>
+          <p class="experiense__description-text text">Верстка по макетам psd, макетам в figma и xd</p>
+          <p class="experiense__description-text text">Полная посадка на Modx</p>
+          <p class="experiense__description-text text">Редактирование в Wordpress</p>
+        </div>
+        <div v-if="currentTab == 2" class="experiense__description">
+          <p class="experiense__description-text text">Информационные технологии, системная интеграция, интернет</p>
+          <p class="experiense__description-text text">Интернет-компания (поисковики, платежные системы, соц.сети, информационно-познавательные и развлекательные ресурсы, продвижение сайтов и прочее)</p>
+          <p class="experiense__description-text text">Разработка программного обеспечения</p>
+          <p class="experiense__description-text text">Системная интеграция, автоматизации технологических и бизнес-процессов предприятия</p>
+          <p class="experiense__description-text text">-Написание и редактирования функционала сайта на чистом javaScript</p>
+          <p class="experiense__description-text text">-Адаптивная верстка для мобильных устройств.</p>
+          <p class="experiense__description-text text">-Кросс-браузерная верстка</p>
+          <p class="experiense__description-text text">-Валидная верстка сайта(соответствующая стандартам W3C)</p>
+          <p class="experiense__description-text text">-Семантическая верстка</p>
+          <p class="experiense__description-text text">-Оптимизация под поисковые системы</p>
+          <p class="experiense__description-text text">-Оптимизация скорости загрузки сайта</p>
+        </div>
+        <div v-if="currentTab == 3" class="experiense__description">
+          <p class="experiense__description-text text">Информационные технологии, системная интеграция, интернет</p>
+          <p class="experiense__description-text text">Интернет-компания (поисковики, платежные системы, соц.сети, информационно-познавательные и развлекательные ресурсы, продвижение сайтов и прочее)</p>
+          <p class="experiense__description-text text">Работа ограничена одним проектом</p>
+          <p class="experiense__description-text text">Верстка новых страниц, блоков, элементов, писем по дизайну в figma</p>
+          <p class="experiense__description-text text">Переписывание функционала с jquery на typescript</p>
+          <p class="experiense__description-text text">Опыт работы с vue.js</p>
         </div>
       </div>
     </div>
@@ -80,11 +78,19 @@ export default {
   .experiense {
     margin: 60px 0 0 0;
 
+    @media (max-width: 1200px) {
+      margin: 30px 0 0 0;
+    }
+
     &__block {
       background: url('../../assets/img/experiense.jpeg') no-repeat center/cover;
       width: 100%;
       height: 600px;
       position: relative;
+
+      @media (max-width: 1200px) {
+        height: 360px;
+      }
 
       &::before {
         content: '';
@@ -106,17 +112,16 @@ export default {
         height: 100%;
         background: rgba(238, 238, 238, 0.65);
         z-index: 1;
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
 
     &__container {
       position: relative;
       height: 100%;
-    }
-
-    &__content {
-      height: 100%;
-      position: relative;
     }
 
     &__tabs {
@@ -127,8 +132,26 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding: 90px 0;
+      padding: 90px 0 90px 15px;
       z-index: 2;
+
+      @media (max-width: 1200px) {
+        top: 50%;
+        transform: translate(0, -50%);
+        padding: 0;
+      }
+
+      @media (max-width: 768px) {
+        position: relative;
+        top: initial;
+        right: initial;
+        transform: initial;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
 
       &-item {
         background: rgba(0, 0, 0, 0.8);
@@ -138,14 +161,28 @@ export default {
         font-weight: 900;
         padding: 8px 0 8px 16px;
         letter-spacing: 20px;
-        margin: 20px 0;
+        margin: 10px 0 30px 0;
         text-align: right;
         max-width: 360px;
         transition: 0.2s;
         cursor: pointer;
 
+        @media (max-width: 1200px) {
+          font-size: 24px;
+          padding: 4px 0 4px 16px;
+          margin: 12px 0;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          padding: 4px 0 4px 16px;
+          letter-spacing: 12px;
+          margin: 8px 0;
+        }
+
         &.active {
-          background: rgba(196, 196, 196, 0.2);
+          background: rgba(196, 196, 196, 0.8);
+          color: #000000;
         }
       }
     }
@@ -159,6 +196,29 @@ export default {
       padding: 90px 15px 90px 0;
       max-height: 420px;
       overflow-y: auto;
+
+      @media (max-width: 1200px) {
+        padding: 0;
+        margin: 20px 15px 20px 0;
+        max-height: 320px;
+        overflow: hidden;
+        overflow-y: auto;
+      }
+
+      @media (max-width: 768px) {
+        position: relative;
+        top: initial;
+        left: initial;
+        width: 100%;
+        padding: 0;
+        margin: 0 15px 0 0;
+        max-height: 170px;
+        padding: 0;
+        overflow: hidden;
+        overflow-y: auto
+      }
+
+      ;
 
       &::-webkit-scrollbar {
         width: 5px;
@@ -174,6 +234,10 @@ export default {
       &-text {
         padding: 8px 0;
         letter-spacing: 1px;
+
+        @media (max-width: 768px) {
+          padding: 4px 0;
+        }
       }
     }
   }
