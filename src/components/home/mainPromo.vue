@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'mainPromo',
     props: {
       title: String
     }
