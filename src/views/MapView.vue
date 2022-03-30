@@ -1,11 +1,11 @@
 <template>
   <div class="map">
-    <mapTemplate msg="Мое местоположение"/>
+    <mapTemplate title="Мое местоположение"/>
   </div>
 </template>
 
 <script>
-  import mapTemplate from '@/components/map/map.vue'
+  import mapTemplate from '@/components/map/mapTemplate.vue'
 
   export default {
     name: 'MapView',

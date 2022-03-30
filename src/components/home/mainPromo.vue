@@ -2,7 +2,7 @@
   <div class="promo">
     <div class="promo__container container">
       <div class="promo__content">
-        <h1 class="promo__content-title title">{{ msg }}</h1>
+        <h1 class="promo__content-title title">{{ title }}</h1>
         <p class="promo__content-text text">
           На протяжении всего путешествия по мини сайту, вы узнаете, что я использую для реализации верстки и разработки,
           где набрался опыта, и что еще нужно освоить для того, чтобы комфортно себя чувствовать в сфере IT, конкретно Frontend, приятного вам пути! ;)
@@ -16,7 +16,7 @@
   export default {
     name: 'HelloWorld',
     props: {
-      msg: String
+      title: String
     }
   }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="skills">
     <div class="skills__container container">
-      <h2 class="skills-title subtitle">{{ msg }}</h2>
+      <h2 class="skills-title subtitle">{{ title }}</h2>
       <div class="skills__cards">
         <div class="skills__item" v-for="skills in column" :key="skills">
           <div class="skills__image">
@@ -16,9 +16,9 @@
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'mySkills',
     props: {
-      msg: String
+      title: String
     },
     data() {
       return {
@@ -76,8 +76,6 @@
       margin-bottom: 24px;
       border-radius: 4px;
       background: #ffffff;
-      transition: 0.2s;
-      cursor: pointer;
 
       &-text {
         font-size: 14px;
@@ -87,11 +85,8 @@
         margin-right: 25px;
       }
 
-      &:hover {
-        box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
-      }
-
       @media (max-width: 1200px) {
+        width: 100%;
         margin-bottom: 0;
         flex: 0 0 190px;
 
@@ -108,7 +103,7 @@
     &__image {
       width: 100px;
       height: 100px;
-      margin: 0 auto 12px auto;
+      margin: 0 auto 12px;
       display: flex;
       align-items: center;
 

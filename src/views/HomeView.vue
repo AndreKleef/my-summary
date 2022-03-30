@@ -1,22 +1,22 @@
 <template>
   <div class="home">
-    <promo msg="Добро пожаловать на мою страницу"/>
-    <skills msg="Мои ключевые навыки"/>
-    <experience msg="Мой личный опыт" :content="tabData"></experience>
+    <mainPromo title="Добро пожаловать на мою страницу"/>
+    <mySkills title="Мои ключевые навыки"/>
+    <myExperience title="Мой личный опыт" :content="tabData"></myExperience>
   </div>
 </template>
 
 <script>
-  import promo from '@/components/home/promo.vue'
-  import skills from '@/components/home/skills.vue'
-  import experience from '@/components/home/experience.vue'
+  import mainPromo from '@/components/home/mainPromo.vue'
+  import mySkills from '@/components/home/mySkills.vue'
+  import myExperience from '@/components/home/myExperience.vue'
 
   export default {
     name: 'HomeView',
     components: {
-      promo,
-      skills,
-      experience
+      mainPromo,
+      mySkills,
+      myExperience
     },
     data() {
       return {

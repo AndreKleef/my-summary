@@ -1,10 +1,10 @@
 <template>
   <div class="experiense">
-    <h2 class="experiense__content-title subtitle">{{ msg }}</h2>
+    <h2 class="experiense__content-title subtitle">{{ title }}</h2>
     <div class="experiense__block">
       <div class="experiense__container container">
         <div class="experiense__tabs">
-          <span @click="selectTab(row.id)"
+          <span @click="currentTab = row.id"
             v-for="row in content" :key="row"
             :class="{ 'active' : currentTab == row.id }"
             class="experiense__tabs-item">{{ row.title }}
@@ -24,19 +24,15 @@
   export default {
     name: 'HelloWorld',
     props: {
-      msg: String,
+      title: String,
       content: Array
     },
     data() {
       return {
         currentTab: 1
       }
-    },
-    methods:{
-      selectTab(selectedTab) {
-          this.currentTab = selectedTab
-      }
     }
+
   }
 </script>
 
